@@ -4,47 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#303234"
+    android:background="@drawable/blackback"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="162dp"
+        android:layout_height="53dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginRight="125dp"
+        android:fontFamily="@font/blinker_semibold"
+        android:text="CurrConv"
+        android:textColor="#B2AFC1"
+        android:textSize="40sp" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="495dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="10dp"
         android:clickable="true"
         android:focusable="true"
         app:cardCornerRadius="25dp">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.0"
-            android:gravity="center"
-            android:text="Currency Converter"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:textSize="25sp" />
-
         <LinearLayout
             android:id="@+id/master_linear_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
             android:orientation="vertical"
-            android:padding="12dp"
-            android:paddingBottom="10dp">
+            android:padding="10dp">
 
             <LinearLayout
                 android:id="@+id/dropdown_menu_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="373dp"
+                android:layout_height="141dp"
                 android:layout_marginTop="8dp"
                 android:orientation="vertical"
                 android:paddingTop="10dp"
@@ -64,16 +70,20 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="0dp"
                         android:layout_weight="1.0"
+                        android:gravity="center"
                         android:text="Convert From"
-                        android:textColor="#000000" />
+                        android:textColor="#A03535"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/convert_to_title"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1.0"
+                        android:gravity="center"
                         android:text="Convert To"
-                        android:textColor="#000000" />
+                        android:textColor="#965940"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -94,7 +104,7 @@
                         android:hint="Select Currency"
                         android:text=""
                         android:textColor="#000000"
-                        android:textSize="10sp"
+                        android:textSize="14sp"
                         app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24"
                         app:drawableRightCompat="@drawable/ic_baseline_arrow_drop_down_24" />
 
@@ -107,7 +117,7 @@
                         android:hint="Select Currency"
                         android:text=""
                         android:textColor="#000000"
-                        android:textSize="10sp"
+                        android:textSize="14sp"
                         app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24"
                         app:drawableRightCompat="@drawable/ic_baseline_arrow_drop_down_24" />
 
@@ -117,8 +127,8 @@
 
             <LinearLayout
                 android:id="@+id/dropdown_linear_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="373dp"
+                android:layout_height="141dp"
                 android:layout_marginTop="8dp"
                 android:orientation="vertical"
                 android:paddingTop="10dp"
@@ -139,7 +149,8 @@
                         android:layout_marginLeft="0dp"
                         android:layout_weight="1.0"
                         android:text="Amount To Convert"
-                        android:textColor="#000000" />
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/conversion_rate_result"
@@ -147,8 +158,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.0"
                         android:gravity="center"
-                        android:text="Conversion Rate"
-                        android:textColor="#000000" />
+                        android:text="Result"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -188,26 +200,23 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:paddingTop="20dp">
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/conversion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:paddingTop="7dp"
-                    android:paddingBottom="7dp"
                     android:text="Convert"
-                    android:textColor="#000000" />
+                    android:textColor="#F6F4F4"
+                    app:backgroundTint="#27011C"
+                    app:cornerRadius="16dp" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:paddingTop="20dp">
+                android:layout_height="wrap_content">
 
                 <Button
                     android:id="@+id/exit"
@@ -217,7 +226,9 @@
                     android:paddingTop="7dp"
                     android:paddingBottom="7dp"
                     android:text="Exit"
-                    android:textColor="#000000" />
+                    android:textColor="#F6F3F3"
+                    app:backgroundTint="#0B0000"
+                    app:cornerRadius="16dp" />
 
             </RelativeLayout>
 
